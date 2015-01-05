@@ -1,0 +1,159 @@
+extends layout
+
+block content
+  script
+    include ../public/js/main.js
+
+  .container
+    .row
+      .col-sm-6
+        p .
+
+    .row
+      .col-sm-12.fm-bg
+
+
+        form#dd-form(action='#')
+          h2 Direct Debit Form
+
+          .frm#sf1
+            fieldset
+              legend Step 1 of 3
+              .col-sm-4
+                .row
+                  .col-sm-12
+                    .form-group
+                      label(for='title') Title:
+                      select(name="title").form-control.input-sm
+                        option(value='Mr') Mr
+                        option(value='Mrs') Mrs
+                        option(value='Ms') Ms
+                        option(value='Miss') Miss
+                        option(value='Dr') Dr
+                    .form-group
+                      label(for='name-2') Name *
+                      input(id='name-2',name='name',type='text').form-control.input-sm.required
+                    .form-group
+                      label(for='surname-2') Surname *
+                      input(id='surname-2',name='surname',type='text').form-control.input-sm.required
+                    .form-group
+                      label(for='email-2') Email *
+                      input(id='email-2',name='email',type='text').form-control.input-sm.required
+                    .form-group
+                      label(for='addEnterID') post code or street
+                      input(id="addEnterID" name="addEnterN").form-control.input-sm
+                      textarea(id="addID", name="addN", rows="5", colls="30").form-control
+
+                .row
+                  .col-sm-4
+                    .form-group
+                      button.btn.btn-primary.open1(type="button") Next
+
+
+              .col-sm-1
+
+              .col-sm-5
+                #dd
+                  img(src="images/dd.png", style="float:right")
+                  h2 The Direct Debit Guarantee
+                  ul
+                    li This Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits
+                    li If there are any changes to the amount, date or frequency of your Direct Debit #[strong The Karuna Trust] will notify
+                      | you 10 working days in advance of your account being debited or as otherwise agreed. If you request #[strong The Karuna Trust]
+                      | to collect a payment, confirmation of the amount and date will be given to you at the time of the request
+                    li If an error is made in the payment of your Direct Debit, by the #[strong The Karuna Trust] or your bank or building society,
+                      | you are entitled to a full and immediate refund of the amount paid from your bank or building society
+                      ul
+                        li If you receive a refund you are not entitled to, you must pay it back when the #[strong The Karuna Trust] asks you to
+                    li You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation
+                      | may be required. Please also notify us.
+                  p If you would like to print a copy of the guarantee,
+                    | click #[a(href="#", onClick="prtDiv('dd');return false") here]
+
+          .frm#sf2
+            fieldset
+              legend Step 2 of 3
+              .col-sm-5
+                .row
+                  .col-sm-12
+                    h3.head-sm Account holders
+                    p If you are not the account holder or your account requires more than
+                      | one signature a paper Direct Debit Instruction will be required to be
+                      | completed and posted to us. Click here to print off a paper Direct Debit Instruction.
+                    p To set-up your Direct Debit you must confirm that you are the account holder and that
+                      | you are the only person required to authorise Direct Debits from this account.
+                    p <strong> To confirm the account is in your name, and that you are the only person required
+                      | to authorise Direct Debits on this account </strong>
+                      checkbox
+                        label(for="accNameOk") please tick here:&nbsp &nbsp
+                          input(type="checkbox", id="accNameOK", value="1")
+
+
+                .row
+                  .col-sm-12
+                    .form-group
+                      label(for='accName-2') Account Name
+                      input(id='accName-2',name='accName',type='text',class="form-control")
+                    .form-group
+                      label(for='sortCode-2') Sort Code
+                      input(id='sortCode-2',name='sortCode',type='text',class="form-control",)
+                    .form-group
+                      label(for='accNum-2') Account Number
+                      input(id='accNum-2',name='accNum',type='text',class="form-control")
+                    p (*) Mandatory
+
+                .row
+                  .col-sm-12
+                    ul.pager
+                      li.previous
+                        a.back2(hfef="#" ) &larr; Previous
+                      li.next
+                        a.open2(hfef="#" ) &rarr; Next
+
+              .col-sm-1
+
+              .col-sm-5
+                .row
+                  .col-sm-12
+                    h3.head-sm Postal Confirmation and the Set-up
+                    p The details of your Direct Debit Instruction will be sent to you within 3 working days
+                      | or no later than 10 working days before the first collection.
+                    p Any change to the date, amount and/or frequency of your Direct Debit collection will be
+                      | notified to you at least 10 working days in advance.
+                    p We shall lodge the Direct Debit Instruction on your account within 10 working days.
+                    h3 Your Bank Statement
+                    p Donations taken by us using Direct Debit will appear on your bank statement as The Karuna Trust.
+                    h3 Our Postal Address
+                    address
+                      | 72 Holloway Road<br>
+                      | London<br>
+                      | N7 8JG<br>
+                    h3 Direct Debit Enquiries
+                    p If you have any queries, please phone 0207 700 3434 or email info@karuna.org.
+
+
+
+
+
+          .frm#sf3
+            fieldset
+              legend Step 3 of 3
+              .col-sm-4
+                .row
+                  .col-sm-12
+                    .form-group
+                      h3 Review
+                      p This is where the user has the oppertunity to review the Dirct Debit
+                .row
+                  .col-sm-12
+                    .form-group
+                      .col-sm-4
+                        button.btn.btn-warning.back3(type="button") Back
+                      .col-sm-4
+                        button.btn.btn-primary.open3(type="button") Submit
+
+                    .form-inline
+                      .form-group
+                        button.btn.btn-warning.back2(type="button") Back
+                      .form-group
+                        button.btn.btn-primary.open2(type="button") next

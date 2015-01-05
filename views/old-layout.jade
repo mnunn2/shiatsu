@@ -1,0 +1,82 @@
+doctype html
+html
+  head
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      meta(name='description', content='')
+      meta(name='author', content='')
+      link(rel='shortcut icon', href='/images/karunafavico.png')
+      title Fixed Top Navbar Example for Bootstrap
+
+      // Bootstrap core CSS
+      link(href='/css/bootstrap.css', rel='stylesheet')
+
+      // Custom styles for this template
+      link(href='/css/navbar-fixed-top.css', rel='stylesheet')
+
+      // PCA CSS
+      link(href='http://services.postcodeanywhere.co.uk/css/captureplus-2.20.min.css?key=nx22-ga91-ff35-xm99', rel='stylesheet')
+      script(src='https://code.jquery.com/jquery-1.11.1.js')
+      //script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+      script(src='//ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js')
+      script(src='/js/bootstrap.min.js')
+      script(src='http://services.postcodeanywhere.co.uk/js/captureplus-2.20.min.js?key=nx22-ga91-ff35-xm99')
+
+
+
+
+      //
+         HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+      //if lt IE 9
+        script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+        script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+
+  body.section-1
+    //
+       Fixed navbar
+    .navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav(role="banner")
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.bs-navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/'): img(src="/images/karunalogo.png")
+
+        .navbar-collapse.collapse.bs-navbar-collapse(role="navigation")
+          ul.nav.navbar-nav
+            li
+              a(href='#'): strong DONATE NOW
+            li
+              a(href='#'): strong STORIES
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                strong ABOUT US
+              ul.dropdown-menu
+                li
+                  a(href='#') Our Work
+                li
+                  a(href='http://dev.karuna.usemustard.com/about-us/our-patron/')
+                    | Our Patron
+                li
+                  a(href='#') Financials
+                li
+                  a(href='http://dev.karuna.usemustard.com/what-we-do') Updates
+                li
+                  a(href='#') Video
+                li
+                  a(href='#') Karuna Team
+            li
+              a(href='#contact'): strong OUR PROJECTS
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.btn.btn-default.btn-sm.navbar-btn#btn-fundraise(roll='button', href='#contact'): strong FUNDRAISE NOW
+        //
+            /.nav-collapse
+
+
+    block content
+
+
+    // ======= Bootstrap core JavaScript =========
