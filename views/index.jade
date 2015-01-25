@@ -1,13 +1,7 @@
 extends layout
 block content
 
-  .jumbotron
-    .container
-      h1 Shiatsu with Lou
-      p Try a Shiatsu treatment
-      p
-        a.btn.btn-primary.btn-lg(role='button') Learn more &raquo;
-  .container
+
     // Example row of columns
     .row
       .col-md-4
@@ -27,7 +21,7 @@ block content
           | complementary training on health and disease gives me a variety of
           | tools to care for my clients and help them to better health.
         p
-          a.btn.btn-default(href='#', role='button') Learn more &raquo;
+          a.btn.btn-default(href='/about', role='button') Learn more &raquo;
       .col-md-4
         h2 Treatment
         p
@@ -37,7 +31,7 @@ block content
           | experience and regular Shiatsu sessions help to prevent the build up
           | of stress in our daily lives.
         p
-          a.btn.btn-default(href='#', role='button') Learn More &raquo;
+          a.btn.btn-default(href='/treatment', role='button') Learn More &raquo;
     hr
     footer
       p &copy; Company 2014

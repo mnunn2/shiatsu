@@ -14,6 +14,19 @@ router.get('/faq', function(req, res) {
   res.render('faq', { title: 'Frequently asked questions' });
 });
 
+router.get('/contact', function(req, res) {
+  res.render('contact', { title: 'contact page' });
+});
+
+router.get('/treatment', function(req, res) {
+  res.render('treatment', { title: 'your treatment' });
+});
+
+router.get('/about', function(req, res) {
+  res.render('about', { title: 'About Lou' });
+});
+
+
 
 
 module.exports = router;
