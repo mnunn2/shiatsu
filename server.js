@@ -59,15 +59,16 @@ app.use(function(err, req, res, next) {
     });
 });
 
+var ipaddr = "0.0.0.0";
+var port = 8080;
+// //  Set up the server openshift way
+// var ipaddr  = process.env.OPENSHIFT_NODEJS_IP;
+// var port    = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
-//  Set up the server openshift way
-var ipaddr  = process.env.OPENSHIFT_NODEJS_IP;
-var port    = process.env.OPENSHIFT_NODEJS_PORT || 3000;
-
-if (typeof ipaddr === "undefined") {
-   console.warn('No OPENSHIFT_NODEJS_IP environment variable listening on localhost');
-   ipaddr = "127.0.0.1"
-}
+// if (typeof ipaddr === "undefined") {
+//    console.warn('No OPENSHIFT_NODEJS_IP environment variable listening on localhost');
+//    ipaddr = "127.0.0.1"
+// }
 
 //  terminator === the termination handler.
 function terminator(sig) {
